@@ -1,0 +1,40 @@
+<h1>Ajouter un enseignant</h1>
+
+<form class="example-form" [formGroup]="ajouteEnseignantForm" (ngSubmit)="onSubmit()">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Nom</mat-label>
+      <input matInput placeholder="Nom" formControlName = "nom">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Prenom</mat-label>
+        <input matInput placeholder="Prenom" formControlName = "prenom">
+      </mat-form-field>
+
+    <mat-form-field  class="example-full-width"  appearance="fill">
+        <mat-label>Statut</mat-label>
+        <mat-select formControlName="statut">
+        <mat-option *ngFor="let statut of statuts" [value]="statut.value">
+            {{statut.viewValue}}
+        </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput placeholder="Email" formControlName = "email">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Mot de passe</mat-label>
+        <input type="password" matInput placeholder="Mot de passe" formControlName = "password">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Confirmation</mat-label>
+        <input type="password" matInput placeholder="Confirmation" formControlName = "confirmPass">
+      </mat-form-field>
+
+      <button mat-raised-button color="primary"  [disabled] = "ajouteEnseignantForm.invalid">Ajouter</button>
+  </form>
+

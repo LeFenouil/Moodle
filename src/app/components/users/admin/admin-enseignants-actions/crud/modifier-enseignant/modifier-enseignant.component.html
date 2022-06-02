@@ -1,0 +1,47 @@
+<h1>Modifier un enseignant</h1>
+<form class="example-form" [formGroup]="modifierEnseignantForm" (ngSubmit)="onSubmit()">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Nom</mat-label>
+      <input matInput placeholder="Nom" formControlName = "nom">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Prenom</mat-label>
+        <input matInput placeholder="Prenom" formControlName = "prenom">
+      </mat-form-field>
+
+      <mat-form-field  class="example-full-width"  appearance="fill">
+          <mat-label>Statut</mat-label>
+          <mat-select formControlName="statut">
+          <mat-option *ngFor="let statut of statuts" [value]="statut.value">
+              {{statut.viewValue}}
+          </mat-option>
+          </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput placeholder="Email" formControlName = "email">
+      </mat-form-field>
+
+      <button mat-raised-button color="primary"  [disabled] = "modifierEnseignantForm.invalid">Modifier</button>
+  </form>
+
+
+<h1>Liste des enseignants </h1>
+
+<mat-list>
+  <mat-list-item *ngFor="let enseignant of enseignants">
+    <img matListAvatar src="https://img2.freepng.fr/20180623/iqh/kisspng-computer-icons-avatar-social-media-blog-font-aweso-avatar-icon-5b2e99c40ce333.6524068515297806760528.jpg" alt="image-indisponible">
+    <h3 matLine> {{enseignant.prenom}} {{enseignant.nom}}  </h3>
+    <p matLine>
+      <span> {{enseignant.email}} </span>
+      <span class="demo-2"> -- {{enseignant.role}} </span>
+    </p>
+    <button mat-button color="primary" (click)="selectEnseignant(enseignant)">Voir</button>
+  </mat-list-item>
+</mat-list>
+
+
+
+

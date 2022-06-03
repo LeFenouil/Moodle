@@ -9,7 +9,7 @@ import { AuthService } from './services/auths/auth.service';
 
 
 export class AppComponent {
-  title = 'moodleV2';
+  title = 'UPJV';
 
   constructor(public authService : AuthService){}
 }

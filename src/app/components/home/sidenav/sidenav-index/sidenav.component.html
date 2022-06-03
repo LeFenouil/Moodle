@@ -7,11 +7,11 @@
             close
         </mat-icon>
     </button>
-    MoodleV2
+    UPJV
     <span class="example-spacer"></span>
     <button mat-button class="login-button" (click) = "deconnexion()">
         <mat-icon>logout</mat-icon>
-        <span>Déconnexion</span>
+        <span>Logout</span>
     </button>
 </mat-toolbar>
 
@@ -20,7 +20,6 @@
     <mat-sidenav #sidenav="matSidenav">
 
         <button mat-button class="menu-button" routerLink="shared/modificationProfil">
-            <img class="avatar mat-elevation-z8" width = "120" height = "120" src="https://img.lovepik.com/free-png/20210924/lovepik-thinking-person-png-image_401333021_wh1200.png">
             <h4 class="name">{{authService.getUserDetails.prenom}} {{authService.getUserDetails.nom}}</h4>
             <p class="designation">{{authService.getUserDetails.role | uppercase}}</p>
         </button>

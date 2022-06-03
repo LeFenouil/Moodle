@@ -48,7 +48,7 @@ export class NvInscriptionEnseignementDetailComponent implements OnInit {
           nombreTP: this.detailEnseignementForm.value.nombreTP}
           ).subscribe((data) => {
                 if(data.success){
-                    this.snackBar.open(data.message , "Fermer" , {duration : 2000})
+                    this.snackBar.open(data.message , "Close" , {duration : 2000})
                 }
           })
 

@@ -1,13 +1,13 @@
 
 <form [formGroup]="nomGroupeForm">
 <mat-form-field appearance="fill">
-  <mat-label>Nom</mat-label>
+  <mat-label>Name</mat-label>
   <input matInput formControlName="nom">
 </mat-form-field>
 
 
 <mat-form-field appearance="fill">
-  <mat-label>Enseignement</mat-label>
+  <mat-label>Education</mat-label>
 
   <mat-select #modulesSelectionRef>
     <mat-option *ngFor="let module of modules" [value] = "module" >
@@ -18,7 +18,7 @@
 
 
 <mat-form-field appearance="fill">
-  <mat-label>Type de groupe</mat-label>
+  <mat-label>Group type</mat-label>
 
   <mat-select #typeGroupe>
     <mat-option *ngFor="let type of typesGroupe" [value] = "type" >
@@ -28,6 +28,6 @@
 </mat-form-field>
 
 <button [disabled] = "!this.nomGroupeForm.valid" mat-raised-button color="primary" (click)="createGroupeEtudiant(modulesSelectionRef.selected,typeGroupe.value)">
-      ajouté
+      Add
 </button>
 </form>

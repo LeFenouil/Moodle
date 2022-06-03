@@ -2,13 +2,13 @@
 
 <form class="example-form" [formGroup]="ajouteEnseignantForm" (ngSubmit)="onSubmit()">
     <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>Nom</mat-label>
-      <input matInput placeholder="Nom" formControlName = "nom">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Name" formControlName = "nom">
     </mat-form-field>
   
     <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Prenom</mat-label>
-        <input matInput placeholder="Prenom" formControlName = "prenom">
+        <mat-label>Username</mat-label>
+        <input matInput placeholder="Username" formControlName = "prenom">
       </mat-form-field>
 
     <mat-form-field  class="example-full-width"  appearance="fill">
@@ -21,13 +21,13 @@
     </mat-form-field>
 
       <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Email</mat-label>
-        <input type="email" matInput placeholder="Email" formControlName = "email">
+        <mat-label>Mail</mat-label>
+        <input type="email" matInput placeholder="Mail" formControlName = "email">
       </mat-form-field>
 
       <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Mot de passe</mat-label>
-        <input type="password" matInput placeholder="Mot de passe" formControlName = "password">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput placeholder="Password" formControlName = "password">
       </mat-form-field>
 
       <mat-form-field class="example-full-width" appearance="fill">
@@ -35,6 +35,6 @@
         <input type="password" matInput placeholder="Confirmation" formControlName = "confirmPass">
       </mat-form-field>
 
-      <button mat-raised-button color="primary"  [disabled] = "ajouteEnseignantForm.invalid">Ajouter</button>
+      <button mat-raised-button color="primary"  [disabled] = "ajouteEnseignantForm.invalid">Add</button>
   </form>
 

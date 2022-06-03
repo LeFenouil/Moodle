@@ -10,14 +10,14 @@ class AdminAPI{
                 if(!response){
                     res.json({
                         success : false,
-                        message : "Echec lors de l'ajout de l'enseignant !"
+                        message : "Fail to add the teacher"
                     });
                 }
                 else{
 
                     res.json({
                         success : true,
-                        message : "Enseignant ajouté !"
+                        message : "Teacher added"
                     });
                 }
         })
@@ -32,14 +32,14 @@ class AdminAPI{
                 console.log(user)
                     res.json({
                         success : true,
-                        message : "Utilisateur modifier avec succès"
+                        message : "User Found"
                     });
                 }
                 else{
                 console.log("User Not Found !")
                 res.json({
                     success : false,
-                    message : "Utilisateur Introuvable !"
+                    message : "User Not Found "
                     });
                     }
                })
@@ -49,8 +49,8 @@ class AdminAPI{
         app.post('/api/admin/supprimerEnseignant' , async (req,res) => {
               const {id} = req.body;
               const response = await UserModel.deleteOne({"_id" : id})
-              if(response){E
-                    console.log("Suppression Réussi !")
+              if(response){
+                    console.log("Teacher deleted")
                     res.json({
                         success : true,
 
@@ -61,7 +61,7 @@ class AdminAPI{
                     success : false,
 
                 })
-                    console.log("Echec lors de la suppression !")
+                    console.log("Fail to delete the teacher")
               }
         })
     }
@@ -105,7 +105,7 @@ class AdminAPI{
                       success = false;
                  }
              }
-                 res.json({success : success , message:  "Désinscription avec succès !"});
+                 res.json({success : success , message:  "Unsubscribe successfully"});
       })
  }
 
@@ -114,10 +114,10 @@ class AdminAPI{
                 const{nomGroupe,typeGroupe,nombreEtudiants,idEnseignant,idEnseignement} =  req.body;
                 const response = await GroupeModel.create({"nomGroupe" : nomGroupe, "typeGroupe": typeGroupe, "nombreEtudiants"  : nombreEtudiants , "idEnseignant" : ObjectId(idEnseignant),"idEnseignement" : ObjectId(idEnseignement)})
                 if(response){
-                        res.json({success : true , message:  "Attribution du groupe avec succès !"});
+                        res.json({success : true , message:  "Group assignment successfully"});
                 }
                 else{
-                  res.json({success : false , message:  "Echec lors de l'attribution du groupe !"});
+                  res.json({success : false , message:  "Failed to assign group"});
                 }
       })
     }
@@ -135,7 +135,7 @@ class AdminAPI{
                 res.json(response);
           }
         else{
-                res.json({success : false , message:  "Aucun groupe trouvés "});
+                res.json({success : false , message:  "No groups found"});
         }
       })
      }

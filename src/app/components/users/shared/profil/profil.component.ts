@@ -57,11 +57,11 @@ export class ProfilComponent implements OnInit {
 
               if(data.success){
                   console.log("Success !");
-                  this._snackBar.open("Profil modifié avec succès" , "Fermer")
+                  this._snackBar.open("Profile changed successfully" , "Close")
                   
               }
               else{
-                 this._snackBar.open("Echec de la modification du profil","Femer")
+                 this._snackBar.open("Failed to edit profile","Close")
                 console.log("Failed !");
               }
 

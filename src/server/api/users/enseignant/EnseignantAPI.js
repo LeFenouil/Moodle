@@ -10,7 +10,7 @@ class EnseignantAPI {
                           res.json(response);
                       }
                       else{
-                        res.json({success: false , message : "Echec lors de la récupération des information de l'enseignant !"})
+                        res.json({success: false , message : "Failed to retrieve teacher information"})
                       }
             })
    }
@@ -29,7 +29,7 @@ class EnseignantAPI {
                   res.json(response[0].modulesEnseignee);
               }
               else{
-                res.json({success: false , message : "Echec lors de la récupération des information de l'enseignant !"})
+                res.json({success: false , message : "Failed to retrieve teacher information"})
               }
             })
    }
@@ -39,10 +39,10 @@ class EnseignantAPI {
       const {idEnseignant,idEnseignement,nombreCM,nombreTD,nombreTP} = req.body;
        const response = await EnseignementModel.create({idEnseignement: idEnseignant , idEnseignant: idEnseignement , nombreCM: nombreCM , nombreTD: nombreTD , nombreTP: nombreTP})
       if(response){
-          res.json({success: true , message : "Enseignant Inscrit dans le module avec succès !"});
+          res.json({success: true , message : "Teacher enrolled in the module successfully"});
       }
       else{
-        res.json({success: false , message : "Echec lors de l'inscription de l'enseignant dans le module !"})
+        res.json({success: false , message : "Failed to enroll the teacher in the module"})
       }
     })
 }

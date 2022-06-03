@@ -48,10 +48,10 @@ export class CreateGroupeComponent implements OnInit {
             idEnseignant: this.enseignantID,
             idEnseignement: idEnseignement}).subscribe((data) => {
                   if(data.success){
-                        this.snackBar.open("Groupe "+nomGroupe+" ajouté à l'enseignant" , "Fermer" ,  {duration: 2000})
+                        this.snackBar.open("Group "+nomGroupe+" added to teacher" , "Close" ,  {duration: 2000})
                   }
                   else{
-                    this.snackBar.open(data.message, "Fermer")
+                    this.snackBar.open(data.message, "Close")
                   }
             })
 

@@ -44,7 +44,7 @@ export class ConnexionComponent {
             this.router.navigate(['home']);
             }
             else{
-                this.snackBar.open("Email ou mot de passe incorrect " , "Fermer");
+                this.snackBar.open("Incorrect email or password" , "Closed");
             }
         });
     }

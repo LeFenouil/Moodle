@@ -14,11 +14,11 @@ class SharedAPI {
                                 return res.json({reponse , "success" : true});
                         }
                         else{
-                                return res.json({message : "Erreur lors de la mise à jour du profil" , "success" : false});
+                                return res.json({message : "Error updating profile" , "success" : false});
                         }   
                 }
                 catch(e){
-                        return res.json({message : "Erreur lors de la mise à jour du profil" , "success" : false});
+                        return res.json({message : "Error updating profile" , "success" : false});
                 }
                
          })

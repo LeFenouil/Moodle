@@ -24,18 +24,18 @@ const FORMATIONS: Formation[] = [
     children: [
       {nom: 'Licence 1' , url: "",
         children: [
-          {nom: "Semestre 1", url: FormationsService.LICENCE_1_S1,} , 
-          {nom : "Semestre 2",url: FormationsService.LICENCE_1_S2,}
+          {nom: "Semester 1", url: FormationsService.LICENCE_1_S1,} , 
+          {nom : "Semester 2",url: FormationsService.LICENCE_1_S2,}
               ]},
       {nom: 'Licence 2', url: "",
         children: [
-          {nom: "Semestre 3", url: FormationsService.LICENCE_2_S3} , 
-          {nom : "Semestre 4", url: FormationsService.LICENCE_2_S4,}
+          {nom: "Semester 3", url: FormationsService.LICENCE_2_S3} , 
+          {nom : "Semester 4", url: FormationsService.LICENCE_2_S4,}
               ]}, 
       {nom: 'Licence 3', url: "",  
         children: [
-          {nom: "Semestre 5", url: FormationsService.LICENCE_3_S5,} , 
-          {nom : "Semestre 6", url: FormationsService.LICENCE_3_S6,}
+          {nom: "Semester 5", url: FormationsService.LICENCE_3_S5,} , 
+          {nom : "Semester 6", url: FormationsService.LICENCE_3_S6,}
         ]}, 
     ],
   },
@@ -43,13 +43,13 @@ const FORMATIONS: Formation[] = [
     nom: 'Master', url: "",
     children: [
       {
-        nom: 'Master Informatique', url: "",
+        nom: 'Master Computer science', url: "",
         children: [
-                    {nom: 'Informatique 1' , url: "",
+                    {nom: 'Computer science 1' , url: "",
                      children: [
                        {nom : "Semester 1", url: FormationsService.MASTER_1_INFORMATIQUE_S1,} , 
                        {nom : "Semester 2", url: FormationsService.MASTER_1_INFORMATIQUE_S2,}]}, 
-                    {nom: 'Informatique 2', url: "",
+                    {nom: 'Computer science 2', url: "",
                      children: [
                        {nom : "Semester 3", url: FormationsService.MASTER_2_INFORMATIQUE_S3,}, 
                        {nom : "Semester 4", url: FormationsService.MASTER_2_INFORMATIQUE_S4,}]}

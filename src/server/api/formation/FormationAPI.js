@@ -2,14 +2,6 @@ const { ObjectId } = require("mongodb");
 
 class FormationAPI {
 
-
-    getAllFormations(app,FormationModel){
-           app.post('/api/modules/getAllFormations' , async (req , res) => {
-                    const response = await FormationModel.find();
-                    res.json(response);
-            });
-    }
-
     getModuleFormationsByNiveauAndSemestre(app,FormationModel){
         app.post('/api/modules/getFormationSemetre' , async (req , res) => {
             const{formation , semestre} = req.body;
@@ -20,15 +12,21 @@ class FormationAPI {
     });
     }
 
+    getAllFormations(app,FormationModel){
+           app.post('/api/modules/getAllFormations' , async (req , res) => {
+                    const response = await FormationModel.find();
+                    res.json(response);
+            });
+    }
 
     getModuleFormationById(app,FormationModel){
-      app.post('/api/modules/getFormationById/' , async (req , res) => {
-        const{idFormation} = req.body;
-        const response = await FormationModel.findOne({"_id" : ObjectId(idFormation)})
-        res.json(response);
-});
+        app.post('/api/modules/getFormationById/' , async (req , res) => {
+          const{idFormation} = req.body;
+          const response = await FormationModel.findOne({"_id" : ObjectId(idFormation)})
+          res.json(response);
+  });
     }
-}
 
+}
 
 module.exports = FormationAPI;

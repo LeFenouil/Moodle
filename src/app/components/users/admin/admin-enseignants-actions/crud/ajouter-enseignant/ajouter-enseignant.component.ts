@@ -19,12 +19,12 @@ export interface IStatut{
 export class AjouterEnseignantComponent implements OnInit {
 
     statuts: IStatut[] = [
-    {value: 'EC', viewValue: "Enseignant-Chercheur"},
-    {value: 'PRAG', viewValue: "Professeur agrégé du secondaire détaché dans le supérieur"},
-    {value: 'PAST' , viewValue: "Enseignant-chercheur associé ou invité"},
-    {value: 'CDE' , viewValue: "Contrat d'enseignement"},
-    {value: 'ATER' , viewValue: "Attachés Temporaires d'Enseignement et de Recherche"},
-    {value: 'Vacataire' , viewValue: "Personne extérieure à l'université (Vacataire)"}
+    {value: 'EC', viewValue: "Teacher-Researcher"},
+    {value: 'PRAG', viewValue: "Associate secondary teacher seconded to higher education"},
+    {value: 'PAST' , viewValue: "Associate or guest teacher-researcher"},
+    {value: 'CDE' , viewValue: "Teaching contract"},
+    {value: 'ATER' , viewValue: "Temporary Teaching and Research Associates"},
+    {value: 'Contractor' , viewValue: "Person from outside the university (Contractor)"}
   ];
 
    formSubmitted : boolean = false;
@@ -62,17 +62,17 @@ export class AjouterEnseignantComponent implements OnInit {
     // this.adminService.ajouterUnEnseignant(nom,prenom,email,password,role)
   
       if(password != confirmPass){ 
-        this._snackBar.open("Mot de passe non identique !" , "Fermer")
+        this._snackBar.open("Password not identical" , "Closed")
       }
       else{
         this.adminService.ajouterUnEnseignant({nom,prenom,email,password,statut,role}).subscribe((data) => {
           console.log(data);
                 if(data.success){
-                  this._snackBar.open("Enseignant Ajouté avec succès !" , "Fermer")
+                  this._snackBar.open("Teacher Added successfully" , "Closed")
                   this.ajouteEnseignantForm.reset();
                 }
                 else{
-                  this._snackBar.open("Echec lors de l'ajout de l'enseignant !" , "Fermer")
+                  this._snackBar.open("Failed to add teacher" , "Closed")
                 }
         });
       }

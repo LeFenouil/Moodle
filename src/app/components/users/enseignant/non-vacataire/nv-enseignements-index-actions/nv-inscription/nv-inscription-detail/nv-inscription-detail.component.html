@@ -12,31 +12,30 @@
     <mat-card-subtitle><strong>Groupe CM</strong> {{this.enseignementDetail["grCM"]}}</mat-card-subtitle>
     <mat-card-subtitle><strong>Groupe TD</strong> {{this.enseignementDetail["grTD"]}}</mat-card-subtitle>
     <mat-card-subtitle><strong>Groupe TP</strong> {{this.enseignementDetail["grTP"]}}</mat-card-subtitle>
-    <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
   </mat-card-title-group>
   <mat-card-content>
   </mat-card-content>
 </mat-card>
-<h1>Information supplémentaires</h1>
+<h1>Supplementary information</h1>
 
 <form [formGroup]="detailEnseignementForm">
 
   <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>Nombre de groupe CM</mat-label>
+    <mat-label>CM Group number</mat-label>
     <input matInput placeholder="Nombre de groupe CM" formControlName="nombreCM">
   </mat-form-field>
 
 
   <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>Nombre de groupe TD</mat-label>
+    <mat-label>TD Group number</mat-label>
     <input matInput placeholder="Nombre de groupe TD" formControlName="nombreTD">
   </mat-form-field>
 
 
   <mat-form-field *ngIf="this.enseignementDetail['grTP'] != 0" class="example-full-width" appearance="fill">
-    <mat-label>Nombre de groupe TP</mat-label>
+    <mat-label>TP Group number</mat-label>
     <input matInput placeholder="Nombre de groupe TP" formControlName="nombreTP">
   </mat-form-field>
 </form>
 
-<button color="primary" mat-raised-button (click)="inscriptionEnseignantModule()">S'inscrire</button>
+<button color="primary" mat-raised-button (click)="inscriptionEnseignantModule()">Register</button>

@@ -1,14 +1,14 @@
-<h1> Connexion </h1>
+<h1> Login </h1>
 <form [formGroup]="LoginForm" (ngSubmit)="onSubmit()">
   <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>Email</mat-label>
-    <input matInput placeholder="Email" formControlName = "email">
+    <mat-label>Mail</mat-label>
+    <input matInput placeholder="Mail" formControlName = "email">
   </mat-form-field>
 
   <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>Mot de passe</mat-label>
-      <input type = "password" matInput placeholder="Mot de passe" formControlName = "password">
+      <mat-label>Password</mat-label>
+      <input type = "password" matInput placeholder="Password" formControlName = "password">
     </mat-form-field> 
     
-<button type="submit" mat-raised-button color="primary"  [disabled] = "LoginForm.invalid">Connexion</button>
+<button type="submit" mat-raised-button color="primary"  [disabled] = "LoginForm.invalid">Login</button>
 </form>

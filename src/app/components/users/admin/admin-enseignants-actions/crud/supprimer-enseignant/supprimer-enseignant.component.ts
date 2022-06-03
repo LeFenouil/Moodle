@@ -30,10 +30,10 @@ export class SupprimerEnseignantComponent implements OnInit {
      const id = enseignant._id;
      this.adminService.supprimerUnEnseignant({id}).subscribe((data) => {
                if(data.success){ 
-                this.snackBar.open("Supprimé avec succès !" , "Fermer")
+                this.snackBar.open("Successfully deleted" , "Close")
                }
                else{
-                this.snackBar.open("Echec de la suppression !" , "Fermer")
+                this.snackBar.open("Delete Failed" , "Close")
                }
      });
         this.router.navigate(['admin/ajouterEnseignant']);

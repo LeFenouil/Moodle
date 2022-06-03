@@ -21,7 +21,7 @@ export class ListeEnseignantComponent implements OnInit {
 
   enseignants  : any;
 
-  displayedColumns: string[] = ['Id', 'nom', 'prenom', 'email' , "role"];
+  displayedColumns: string[] = ['Id', 'Name', 'Username', 'Mail' , "Role"];
 
   constructor(private adminService : AdminService) {
       

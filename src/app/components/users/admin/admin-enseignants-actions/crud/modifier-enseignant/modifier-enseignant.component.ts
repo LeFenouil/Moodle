@@ -21,12 +21,12 @@ export class ModifierEnseignantComponent implements OnInit {
   enseignantSelectionner : any;
   
   statuts : IStatut[] = [
-    {value: 'EC', viewValue: 'Enseignant-Chercheur'},
-    {value: 'PRAG', viewValue: 'Professeur agrégé du secondaire détaché dans le supérieur'},
-    {value: 'PAST' , viewValue: 'Enseignant-chercheur associé ou invité'},
-    {value: 'CDE' , viewValue: "Contrat d'enseignement"},
-    {value: 'ATER' , viewValue: "Attachés Temporaires d'Enseignement et de Recherche"},
-    {value: 'Vacataire' , viewValue: "Personne extérieure à l'université qui intervient pour quelques heures"}
+    {value: 'TR', viewValue: 'Teacher-Researcher'},
+    {value: 'AST', viewValue: 'Associate secondary teacher seconded to higher education'},
+    {value: 'ATR' , viewValue: 'Associate or guest teacher-researcher'},
+    {value: 'TC' , viewValue: "Teaching contract"},
+    {value: 'TTRA' , viewValue: "Temporary Teaching and Research Associates"},
+    {value: 'Contractor' , viewValue: "Person from outside the university who intervenes for a few hours"}
   ];
 
   modifierEnseignantForm = new FormGroup({
@@ -67,7 +67,7 @@ export class ModifierEnseignantComponent implements OnInit {
 
 
      this.adminService.modifierUnEnseignant({id,nom,prenom,email,statut,role}).subscribe((data) => {
-            this._snackBar.open("Modifier avec succès !" , "Fermer")
+            this._snackBar.open("Edit successfully" , "Close")
             this.modifierEnseignantForm.reset();
      });
    }

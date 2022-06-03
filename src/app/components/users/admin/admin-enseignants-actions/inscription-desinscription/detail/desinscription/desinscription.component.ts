@@ -55,10 +55,10 @@ export class DesinscriptionComponent implements OnInit {
           this.adminService.desinscriptionEnseignantModules({idEnseignant : this.idEnseignantSelectionner!, modulesIDs: modulesDesinscritIds}).subscribe(
              (data) => {
                   if(data.success){
-                      this.snackbar.open("Désinscription avec succès " , "Fermer" , {duration : 2000 , horizontalPosition: "center"});
+                      this.snackbar.open("Unsubscribe successfully " , "Close" , {duration : 2000 , horizontalPosition: "center"});
                   }
                   else{
-                     this.snackbar.open("Echec lors de l'ajouts des modules à l'enseignant" , "Fermer");
+                     this.snackbar.open("Failed to add modules to teacher" , "Close");
                   }
            })
   }
